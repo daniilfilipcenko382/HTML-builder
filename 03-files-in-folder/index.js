@@ -5,8 +5,7 @@ const path1 = path.join(__dirname,'secret-folder/');
 
 
 fs.readdir(path1,  (err, files) => {
-    if(err) throw err; // не прочитать содержимое папки
-    console.log(path1);
+    if(err) throw err;  
     files.forEach(file => {              
         fs.stat(path1 + file, (err1, stats) => {
             if(err1) throw err1;
